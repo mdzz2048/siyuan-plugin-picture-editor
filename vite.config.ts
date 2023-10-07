@@ -47,6 +47,10 @@ export default defineConfig({
                     src: "./src/i18n/**",
                     dest: "./i18n/",
                 },
+                {
+                    src: "./src/index.css",
+                    dest: "./",
+                },
             ],
         }),
     ],
@@ -57,6 +61,8 @@ export default defineConfig({
     // 在这里自定义变量
     define: {
         "process.env.DEV_MODE": `"${isWatch}"`,
+        // 设置环境变量，避免浏览器报错: process is not defined
+        "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
     },
 
     build: {
