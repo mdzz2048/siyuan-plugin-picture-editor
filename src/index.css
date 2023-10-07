@@ -1,0 +1,3 @@
+.b3-dialog__container:has(.b3-dialog__body > #editor_container) {
+    background-color: white;
+}
